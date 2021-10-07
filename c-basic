@@ -1,0 +1,55 @@
+#include <stdio.h>
+
+//#define MAX 100 定义全局变量
+ 
+//#define MAX(x,y) (x>y?x:y) 定义宏
+
+
+struct Book
+{
+	char name[20];
+	int price;
+};
+int main()
+{
+
+	// int a =10;
+	// int b =20;
+	// int max = MAX(a,b);
+	// printf("%d\n",max);
+
+	// int a = 10;//四个字节
+	// int* p = &a;//取地址
+	// printf("%p\n",&a);
+	// printf("%p\n",p);
+	// *p = 20;
+	// printf("a=%d\n",a);
+
+	// char ph = 'w';
+	// char* x = &ph;
+	// //地址的大小是8byte
+	// printf("%d\n",sizeof(x));
+	// *x = 'z';
+	// printf("%p\n",ph);
+
+	// int a = 10;
+	// int* p = &a;
+	// printf("%p\n",p);
+	// printf("%p\n",&a);
+	// *p = 20;
+	// printf("a=%d\n",a);
+
+	struct Book b1 = {"c语言程序设计",20};
+	printf("书名:%s\n",b1.name);
+	printf("价格:%d元\n",b1.price);
+
+	struct Book* pb = &b1;
+	printf("%s\n",(*pb).name);//指针
+	printf("%d\n",(*pb).price);
+	printf("---------利用bp打印出我的书名和价格\n");
+	printf("%s\n",pb->name);
+	printf("%d\n",pb->price);
+
+
+	return (0);
+}
